@@ -69,6 +69,11 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    if vim.g.neovide then
+      vim.opt.guifont = { "Hack Nerd Font", "h20" }
+      vim.g.neovide_scale_factor = 0.78
+      vim.g.neovide_cursor_trail_size = 0.2
+    end
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
